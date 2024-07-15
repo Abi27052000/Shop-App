@@ -18,7 +18,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Shop App",
-      home: HomePage(),
+      theme: ThemeData(
+          fontFamily: "Oswald",
+          inputDecorationTheme: const InputDecorationTheme(
+              hintStyle: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ))),
+      home: const HomePage(),
     );
   }
 }
