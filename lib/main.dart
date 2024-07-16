@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/global_variables.dart';
 import 'package:shop_app/home_page.dart';
+import 'package:shop_app/product_details_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,14 +21,18 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: "Shop App",
       theme: ThemeData(
-        fontFamily: "Oswald",
-        inputDecorationTheme: const InputDecorationTheme(
-          hintStyle: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
+          fontFamily: "Oswald",
+          inputDecorationTheme: const InputDecorationTheme(
+            hintStyle: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        textTheme: const TextTheme(
+          textTheme: const TextTheme(
+            titleLarge: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 35,
+            ),
             titleMedium: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
@@ -34,9 +40,17 @@ class _MyAppState extends State<MyApp> {
             bodySmall: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-            )),
-      ),
-      home: const HomePage(),
+            ),
+          ),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.blueAccent,
+            centerTitle: true,
+            titleTextStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+            ),
+          )),
+      home: HomePage(),
     );
   }
 }
