@@ -19,12 +19,23 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: "Shop App",
       theme: ThemeData(
-          fontFamily: "Oswald",
-          inputDecorationTheme: const InputDecorationTheme(
-              hintStyle: TextStyle(
+        fontFamily: "Oswald",
+        inputDecorationTheme: const InputDecorationTheme(
+          hintStyle: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
-          ))),
+          ),
+        ),
+        textTheme: const TextTheme(
+            titleMedium: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
+            bodySmall: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            )),
+      ),
       home: const HomePage(),
     );
   }
