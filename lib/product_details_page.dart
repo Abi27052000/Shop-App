@@ -37,7 +37,7 @@ class _ProdutDetailsPageState extends State<ProdutDetailsPage> {
             ),
             Container(
               margin: const EdgeInsets.all(10),
-              height: 250,
+              height: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.grey,
