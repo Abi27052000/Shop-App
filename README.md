@@ -4,7 +4,7 @@ A Flutter-based mobile application for a simple shopping experience.
 
 ## Description
 
-Shop App is a user-friendly mobile application that allows users to browse through a variety of products, add items to their cart, and manage their shopping experience. This app is built using Flutter, providing a smooth and responsive interface across both iOS and Android platforms.
+Shop App is a user-friendly mobile application that allows users to browse through a variety of products, add items to their cart, and manage their shopping experience. This app is built using Flutter, providing a smooth and responsive interface across Android platforms.
 
 ## Features
 
