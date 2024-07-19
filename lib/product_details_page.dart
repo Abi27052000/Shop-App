@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/cart_provider.dart';
 
 class ProdutDetailsPage extends StatefulWidget {
   final Map<String, Object> product;
@@ -83,7 +85,43 @@ class _ProdutDetailsPageState extends State<ProdutDetailsPage> {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        if (selectedSize != 0) {
+                          Provider.of<CartProvider>(context, listen: false)
+                              .addProduct({
+                            'id': widget.product['id'],
+                            'title': widget.product['title'],
+                            'price': widget.product['price'],
+                            'imageUrl': widget.product['imageUrl'],
+                            'company': widget.product['company'],
+                            'sizes': selectedSize,
+                          });
+
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              backgroundColor: Colors.cyan,
+                              content: Center(
+                                child: Text(
+                                  "Product is added successfully!!!",
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ),
+                            ),
+                          );
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              backgroundColor: Colors.cyan,
+                              content: Center(
+                                child: Text(
+                                  "Select a Size",
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ),
+                            ),
+                          );
+                        }
+                      },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blueAccent,
                           minimumSize: const Size(
